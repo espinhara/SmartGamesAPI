@@ -17,9 +17,7 @@ export default ({ PurchaseService }) => {
     }
 
     controller.save = (req, res, next) => {
-        const model = req.body
-
-        PurchaseService.save(model)
+        PurchaseService.save(req.body)
             .then(Data => res.status(200).send(Data))
             .catch(next)
     }

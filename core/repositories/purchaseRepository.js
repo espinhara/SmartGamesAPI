@@ -18,10 +18,10 @@ export default class PurchaseRepository {
         try {
             let purchase = new Purchase(model)
             model._id = purchase._id;
-
+            await purchase.save();
             return { status: 200, model }
         } catch (error) {
-            return { status: 500, message: 'Internal Server Error' }
+            return { status: 500, message: 'Internal Server Error', error }
         }
     }
 }

@@ -6,11 +6,14 @@ import config from './config/index.js';
 import mongoose from 'mongoose';
 import autoIncrement from 'mongoose-auto-increment'
 import route from './api/routes/index.js'
+import bodyParser from 'body-parser';
 
 
 async function startServer() {
     const app = express();
     app.use(cors());
+    app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(bodyParser.json());
     app.listen(config.PORT)
     app.use('/api', route)
     app.use(express.json())
