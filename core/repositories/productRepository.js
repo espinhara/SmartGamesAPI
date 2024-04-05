@@ -2,10 +2,13 @@ import Product from '../models/product.js';
 
 export default class ProductRepository {
     async get(id) {
-        const product = await Product.findById(id);
+        try {
+            const product = await Product.findById(id);
 
-        if (product) return { status: 200, product }
-        else return { status: 404, message: 'Product Not Found' }
+            return { status: 200, product }
+        } catch (error) {
+            return { status: 404, message: 'Product Not Found' }
+        }
     }
     async list() {
         const products = await Product.find();

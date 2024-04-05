@@ -2,9 +2,13 @@ import Purchase from '../models/purchase.js';
 
 export default class PurchaseRepository {
     async get(id) {
-        const purchase = await Purchase.findById(id);
-        if (purchase) return { status: 200, purchase }
-        else return { status: 404, message: 'Purchase Not Found' }
+        try {
+            const purchase = await Purchase.findById(id);
+
+            return { status: 200, purchase }
+        } catch (error) {
+            return { status: 404, message: 'Purchase Not Found' }
+        }
     }
     async list() {
         const purchases = await Purchase.find();
