@@ -1,0 +1,16 @@
+# Arquivos temporários
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Arquivos de build
+/build
+/dist
+
+# Arquivos de ambiente
+.env
+
+# Outros arquivos
+*.log
+*.bak
+.DS_Store

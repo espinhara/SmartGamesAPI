@@ -1,0 +1,19 @@
+{
+  "name": "smart-games-api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "API for Web/Mobile SmartGames",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "awilix": "^10.0.2",
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.0",
+    "mongoose-auto-increment": "^5.0.1"
+  }
+}
