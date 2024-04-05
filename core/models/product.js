@@ -6,7 +6,7 @@ const ProductSchema = new Schema({
     name: String,
     description: String,
     imageLink: String,
-    price: Number,
+    price: String,
     platforms: String,
     shops: String,
     storeAddresses: [{
