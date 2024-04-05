@@ -21,7 +21,7 @@ async function startServer() {
         //     useCreateIndex: true
         // }
     ).then(console.log('Mongo connected at port:', config.PORT)).catch(e => console.log('error:', e))
-    autoIncrement.initialize(mongoose.connection);
+    // autoIncrement.initialize(mongoose.connection);
 
 }
 
