@@ -11,7 +11,7 @@ export default class PurchaseRepository {
         }
     }
     async list() {
-        const purchases = await Purchase.find();
+        const purchases = await Purchase.find().populate('product');
         if (purchases) return { status: 200, purchases }
     }
     async save(model) {
