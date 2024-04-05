@@ -11,8 +11,8 @@ const ProductSchema = new Schema({
     shops: String,
     storeAddresses: [{
         name: String,
-        latitude: Number,
-        longitude: Number,
+        latitude: Schema.Types.Decimal128,
+        longitude: Schema.Types.Decimal128,
         address: String,
     }]
 })
