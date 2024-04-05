@@ -5,6 +5,6 @@ export default class ProductRepository {
         return await Product.findById(id);
     }
     async list() {
-        return await Product.find({ $or: [{ deleted: { $exists: false } }, { deleted: false }] });
+        return await Product.find();
     }
 }
